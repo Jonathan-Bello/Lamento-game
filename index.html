@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lamento — prototipo M0</title>
+    <meta name="description" content="Metroidvania de terror 2.5D para navegador. Prototipo M0." />
+  </head>
+  <body>
+    <canvas id="game"></canvas>
+
+    <!-- Efectos de pantalla por cercanía (§4.1) -->
+    <div id="vignette" class="overlay"></div>
+    <div id="frost" class="overlay"></div>
+    <!-- Modo visual del lamento (§13) -->
+    <div id="wave-left" class="wave"></div>
+    <div id="wave-right" class="wave"></div>
+
+    <!-- HUD minimalista (§11.1) -->
+    <div id="stamina"></div>
+    <div id="subtitle"></div>
+    <div id="toast"></div>
+    <pre id="debug" hidden></pre>
+    <div id="fade" class="overlay"></div>
+
+    <div id="start" class="screen">
+      <h1>Lamento</h1>
+      <p class="tagline">«Si la escuchas lejos… ya está aquí.»</p>
+      <p class="rule">Cuanto más <b>débil</b> suena el lamento, más <b>cerca</b> está.<br />Cuando los grillos callan, corre.</p>
+      <button id="play">Presiona para comenzar</button>
+      <p class="hint">🎧 Usa audífonos.</p>
+      <table class="controls">
+        <tr><td>A / D · ← →</td><td>Moverse</td></tr>
+        <tr><td>Espacio · W</td><td>Saltar (mantén para saltar más alto)</td></tr>
+        <tr><td>Shift</td><td>Correr (hace ruido y gasta aliento)</td></tr>
+        <tr><td>Esc</td><td>Pausa</td></tr>
+        <tr><td>V · C · I</td><td>Modo visual del lamento · Subtítulos · Depuración</td></tr>
+      </table>
+      <p class="hint">Prototipo M0 · sala gris · también funciona con mando</p>
+    </div>
+
+    <div id="pause" class="screen" hidden>
+      <h2>Pausa</h2>
+      <p>Presiona <b>Esc</b> para continuar</p>
+    </div>
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
